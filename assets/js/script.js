@@ -113,43 +113,80 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// ------- Section about прокрутка чисел ---------------------------------------
+// Функция анимации чисел
+function animateNumbers() {
+    const numbers = document.querySelectorAll('.number');
+    
+    numbers.forEach((numElement) => {
+        let targetValue = parseInt(numElement.textContent);
+        let currentValue = 0;
+
+        // Анимация от 0 до целевого значения
+        const interval = setInterval(() => {
+            currentValue += Math.ceil(targetValue / 100); // увеличение на маленькие шаги
+            numElement.textContent = currentValue + "+";
+            if (currentValue >= targetValue) {
+                clearInterval(interval);
+                numElement.textContent = targetValue + "+"; // Устанавливаем окончательное значение
+            }
+        }, 60); // Плавная анимация через каждые 30 мс
+    });
+}
+
+// Отслеживание появления на экране
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            animateNumbers(); // Запуск анимации чисел
+            observer.unobserve(entry.target); // Останавливаем отслеживание
+        }
+    });
+}, { threshold: 0.5 }); // Порог 50% видимости
+
+// Наблюдаем за всеми элементами .stat
+const stats = document.querySelectorAll('.stat');
+stats.forEach(stat => {
+    observer.observe(stat);
+});
 
 
 // ------- Section about прокрутка чисел ---------------------------------------
-document.addEventListener('DOMContentLoaded', () => {
-    const statsBlock = document.getElementById('stats');
-    const stats = document.querySelectorAll('.stat');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                stats.forEach(stat => {
-                    const line = stat.querySelector('.line');
-                    const number = stat.querySelector('.number');
-                    const target = +number.getAttribute('data-target');
-                    stat.classList.add('visible');
-                    line.classList.add('visible');
-                    scrollToTarget(number, target);
-                });
-                observer.disconnect();
-            }
-        });
-    }, { threshold: 0.5 });
+// document.addEventListener('DOMContentLoaded', () => {
+//     const statsBlock = document.getElementById('stats');
+//     const stats = document.querySelectorAll('.stat');
+//     const observer = new IntersectionObserver(entries => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 stats.forEach(stat => {
+//                     const line = stat.querySelector('.line');
+//                     const number = stat.querySelector('.number');
+//                     const target = +number.getAttribute('data-target');
+//                     stat.classList.add('visible');
+//                     line.classList.add('visible');
+//                     scrollToTarget(number, target);
+//                 });
+//                 observer.disconnect();
+//             }
+//         });
+//     }, { threshold: 0.5 });
 
-    observer.observe(statsBlock);
+//     observer.observe(statsBlock);
 
-    function scrollToTarget(element, target) {
-        let start = 0;
-        const increment = target / 100;
-        const duration = 2000;
-        const stepTime = duration / 100;
-        const timer = setInterval(() => {
-            start += increment;
-            element.textContent = Math.round(start);
-            if (start >= target) {
-                clearInterval(timer);
-                element.textContent = target;
-            }
-        }, stepTime);
-    }
-});
+//     function scrollToTarget(element, target) {
+//         let start = 0;
+//         const increment = target / 100;
+//         const duration = 2000;
+//         const stepTime = duration / 100;
+//         const timer = setInterval(() => {
+//             start += increment;
+//             element.textContent = Math.round(start);
+//             if (start >= target) {
+//                 clearInterval(timer);
+//                 element.textContent = target;
+//             }
+//         }, stepTime);
+//     }
+// });
 
