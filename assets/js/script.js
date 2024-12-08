@@ -29,7 +29,7 @@ const isMobile = {
 if (isMobile.any()) {
     document.body.classList.add('_touch');
 	
-			let menuArrows = document.querySelectorAll('.menu__arrow');
+			let menuArrows = document.querySelectorAll('.menu-item-has-children');
 			if (menuArrows.length > 0) {
 				for (let index = 0; index < menuArrows.length; index++) {
 					const menuArrow = menuArrows[index];
@@ -46,42 +46,51 @@ if (isMobile.any()) {
 // Меню бурнер
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
+
 if (iconMenu) {
 	iconMenu.addEventListener("click", function (e) {
-		document.body.classList.toggle('_lock');
-		iconMenu.classList.toggle('_active');
-		menuBody.classList.toggle('_active');
+		document.body.classList.add('_lock');
+		iconMenu.classList.add('_active');
+		menuBody.classList.add('_active');
+	});
+}
+const IconClose = document.querySelector('.burger');
+if (IconClose) {
+	IconClose.addEventListener("click", function (e) {
+		document.body.classList.remove('_lock');
+		iconMenu.classList.remove('_active');
+		menuBody.classList.remove('_active');
 	});
 }
 
 // -------- Прокрутка при клике -----------------------------------------
 
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-if(menuLinks.length > 0) {
-	menuLinks.forEach(menuLink => {
-		menuLink.addEventListener("click", onMenuLinkClick);
-	});
+// const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+// if(menuLinks.length > 0) {
+// 	menuLinks.forEach(menuLink => {
+// 		menuLink.addEventListener("click", onMenuLinkClick);
+// 	});
 
-	function onMenuLinkClick(e) {
-		const menuLink = e.target;
-		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+// 	function onMenuLinkClick(e) {
+// 		const menuLink = e.target;
+// 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+// 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+// 			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 		
-			if (iconMenu.classList.contains('_active')) {
-				document.body.classList.remove('_lock');
-				iconMenu.classList.remove('_active');
-				menuBody.classList.remove('_active');
-			}
+// 			if (iconMenu.classList.contains('_active')) {
+// 				document.body.classList.remove('_lock');
+// 				iconMenu.classList.remove('_active');
+// 				menuBody.classList.remove('_active');
+// 			}
 
-			window.scrollTo({
-				top: gotoBlockValue,
-				behavior: "smooth"
-			});
-			e.preventDefault();
-		}
-	}
-}
+// 			window.scrollTo({
+// 				top: gotoBlockValue,
+// 				behavior: "smooth"
+// 			});
+// 			e.preventDefault();
+// 		}
+// 	}
+// }
 
 
 // --------- Переключение языка ------------------------------------------------
