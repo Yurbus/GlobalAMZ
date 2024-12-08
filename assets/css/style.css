@@ -813,6 +813,9 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 @media (max-width: 640px) {
+  .hero {
+    height: 600px;
+  }
   .hero__bg img {
     height: 600px;
   }
