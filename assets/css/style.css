@@ -74,9 +74,9 @@ body._lock {
 }
 
 ._container {
-  max-width: 1340px;
+  max-width: 1356px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 18px;
 }
 
 /*-------- Buttons ----------*/
@@ -110,6 +110,16 @@ body._lock {
   background: var(--pr-hover-color);
 }
 
+@media (max-width: 479.98px) {
+  .primary__btn {
+    font-size: 12px;
+    padding: 19px 45px;
+  }
+  .second__btn {
+    font-size: 12px;
+    padding: 19px 45px;
+  }
+}
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
 /*--------------------- HEADER ---------------------------------------------------------------- */
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
@@ -123,10 +133,10 @@ body._lock {
 }
 
 .header__container {
-  max-width: 1340px;
+  max-width: 1356px;
   margin: 0 auto;
   display: flex;
-  padding: 0 10px;
+  padding: 0 18px;
   align-items: center;
   justify-content: space-between;
   height: 82px;
@@ -393,7 +403,7 @@ body._touch .menu__list > li._active .menu__arrow {
   color: var(--white-color);
 }
 .hero__content .hero__title {
-  font-size: clamp(26px, 4vw, 44px);
+  font-size: clamp(26px, 3vw, 44px);
   text-transform: uppercase;
   font-weight: 800;
   line-height: 1.3;
@@ -428,7 +438,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 /*---------------- Section about ---------------------------------*/
 .about {
-  margin: 50px 0 50px;
+  padding: 50px 0 50px;
 }
 
 .about__body {
@@ -510,10 +520,159 @@ body._touch .menu__list > li._active .menu__arrow {
   margin-left: -132px;
 }
 
+/*---------------- Section know ---------------------------------*/
+.know {
+  padding: 50px 0;
+}
+
+.know__body .know__title {
+  text-align: center;
+  margin-bottom: 44px;
+}
+.know__body .know__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
 /*---------------- Section  ---------------------------------*/
-/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+.case {
+  padding: 50px 0;
+  background: var(--dark-blue-color);
+}
+
+.case__title {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--white-color);
+}
+
+.case__text {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--white-color);
+}
+
+.swiper {
+  width: 100%;
+  height: 630px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide .slide__item {
+  color: var(--white-color);
+}
+.swiper-slide .slide__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+.swiper-slide .slide__item .item__title {
+  color: var(--white-color);
+  margin-bottom: 16px;
+}
+.swiper-slide .category {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.swiper-slide .category .cat-1 {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+.swiper-slide .category .cat-2 {
+  background: var(--white-color);
+  color: var(--black-color);
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+.swiper-slide .item__text {
+  font-family: var(--inter-font);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.swiper-slide .slide__button {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.swiper-css-mode.swiper-horizontal > .swiper-wrapper {
+  scroll-snap-type: x mandatory;
+  height: 560px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 94% !important;
+  width: 50px;
+  height: 50px;
+  z-index: 20;
+}
+
+.swiper-button-next:after {
+  background: url("../img/next.svg") no-repeat !important;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev:after {
+  background: url("../img/prew.svg") no-repeat !important;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next {
+  right: 40%;
+}
+
+.swiper-button-prev {
+  left: 40%;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 23px;
+}
+
+.swiper-pagination-bullet {
+  background: #DEDEDE !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #DF9226 !important;
+  width: 32px;
+  height: 8px;
+  border-radius: 8px;
+}
+
+/*---------------- Section  ---------------------------------*/
+/*---------------- Section  ---------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
 /*---------------- FOOTER ----------------------------------------------------------------------*/
-/*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
+/*----------------------------------------------------------------------------------------------*/
 .footer {
   background-color: var(--dark-blue-color);
   color: var(--white-color);
@@ -629,7 +788,7 @@ body._touch .menu__list > li._active .menu__arrow {
   ._container {
     max-width: 1740px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 18px;
   }
 }
 @media (max-width: 1180px) {
@@ -698,7 +857,7 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 18px;
     height: 12px;
     cursor: pointer;
-    right: 10px;
+    right: 18px;
     top: 32%;
   }
   .menu__icon span,
@@ -806,7 +965,7 @@ body._touch .menu__list > li._active .menu__arrow {
     margin-top: 140px;
   }
   .footer {
-    margin: 0 10px 30px;
+    margin: 0 18px 30px;
   }
   .footer__body {
     display: grid;
@@ -865,6 +1024,15 @@ body._touch .menu__list > li._active .menu__arrow {
     max-width: 100%;
     margin-left: 0;
   }
+  .know__body .know__title {
+    text-align: center;
+    margin-bottom: 34px;
+  }
+  .know__body .know__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
 }
 @media (max-width: 560px) {
   .footer {
@@ -876,6 +1044,9 @@ body._touch .menu__list > li._active .menu__arrow {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 30px;
+  }
+  .footer-widget:not(:first-child) {
+    margin-top: -20px;
   }
   .footer-widget:nth-child(1) {
     grid-area: 1/1/2/3;
