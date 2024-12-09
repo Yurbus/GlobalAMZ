@@ -345,7 +345,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .h2__title {
   font-weight: 800;
-  font-size: clamp(24px, 3vw, 32px);
+  font-size: clamp(24px, 3vw, 44px);
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--black-color);
@@ -423,7 +423,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 /*---------------- Section about ---------------------------------*/
 .about {
-  padding: 50px 0 50px;
+  padding: 50px 0;
 }
 .about__body {
   display: grid;
@@ -520,7 +520,8 @@ body._touch .menu__list > li._active .menu__arrow {
 
 /*---------------- Section  ---------------------------------*/
 .case {
-  padding: 50px 0;
+  margin-top: 50px;
+  padding: 64px 0;
   background: var(--dark-blue-color);
 }
 .case__title {
@@ -599,9 +600,7 @@ body._touch .menu__list > li._active .menu__arrow {
     text-transform: uppercase;
     padding: 22px;
   }
-  .second__btn {
 
-  }
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -649,6 +648,73 @@ body._touch .menu__list > li._active .menu__arrow {
   height: 8px;
   border-radius: 8px;
 }
+/*---------------- Section clients ---------------------------------*/
+.clients {
+  padding: 100px 0 50px;
+}
+.clients__body {
+  .clients__title {
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .clients__text {
+    font-family: var(--inter-font);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+
+  }
+  .clients__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+}
+
+/*---------------- Section whatCan ---------------------------------*/
+.whatCan {
+  margin-top: 50px;
+  padding: 64px 0;
+}
+.whatCan__title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.whatCan__text {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.whatCan__body {
+  margin-top: 20px;
+}
+.swiper2 {
+  width: 100%;
+  height: 680px;
+}
+.swiper-slide {
+  .slide__item2 {
+    .item__title {
+      margin: -90px 18px 18px;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 24px;
+      color: var(--white-color);
+    }
+  }
+  
+}
+
+/*---------------- Section  ---------------------------------*/
+
+
 /*---------------- Section  ---------------------------------*/
 
 
@@ -979,6 +1045,13 @@ body._touch .menu__list > li._active .menu__arrow {
 
   .header__button{
     margin-top: 140px;
+    width: 100%;
+
+    a {
+      display: flex;
+      justify-content: center;
+      padding: 19px;
+    }
   }
   .swiper-button-next {
     right: 20%;
@@ -1072,6 +1145,18 @@ body._touch .menu__list > li._active .menu__arrow {
   }
   .swiper-button-prev {
     left: 0;
+  }
+
+  .clients__body {
+    .clients__title {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+    .clients__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
   }
 
 
