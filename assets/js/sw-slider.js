@@ -1,7 +1,7 @@
 
 var swiper = new Swiper(".mySwiper", {
     cssMode: true,
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -12,6 +12,20 @@ var swiper = new Swiper(".mySwiper", {
     },
     mousewheel: true,
     keyboard: true,
+    breakpoints: {
+        580: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        890: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        1240: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
+    },
 });
 // var swiper = new Swiper(".mySwiper", {
 //     loop: true,

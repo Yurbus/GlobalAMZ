@@ -964,8 +964,14 @@ body._touch .menu__list > li._active .menu__arrow {
   .header__button {
     margin-top: 140px;
   }
+  .swiper-button-next {
+    right: 20%;
+  }
+  .swiper-button-prev {
+    left: 20%;
+  }
   .footer {
-    margin: 0 18px 30px;
+    margin: 30px 18px 30px;
   }
   .footer__body {
     display: grid;
@@ -1032,6 +1038,12 @@ body._touch .menu__list > li._active .menu__arrow {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
   }
 }
 @media (max-width: 560px) {
