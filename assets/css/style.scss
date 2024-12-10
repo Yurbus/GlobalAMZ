@@ -843,8 +843,33 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 
-/*---------------- Section  ---------------------------------*/
-
+/*---------------- Section g_images  ---------------------------------*/
+.g_images {
+  padding: 50px 0;
+}
+.g_images__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .g_images-item {
+    max-height: 600px;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+    .g_images-content {
+      transform: translateY(-33em);
+      margin: 50px;
+      h3 {
+        font-size: clamp(28px, 4vw, 44px);
+        font-weight: 600;
+        line-height: 1.3;
+        text-transform: uppercase;
+        color: var(--white-color);
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
 
 
 
@@ -1013,10 +1038,34 @@ body._touch .menu__list > li._active .menu__arrow {
   .swiper3 {
     width: 100%;
     height: 715px;
-}
+  }
   .swiper-css-mode.swiper-horizontal > .swiper-wrapper {
     height: 630px !important;
   }
+  .g_images__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    .g_images-item {
+      height: 400px;
+      .g_images-content {
+        transform: translateY(-20em);
+      }
+    }
+    .g_images-item:nth-child(1) { 
+      grid-area: 1 / 1 / 2 / 5; 
+    }
+    .g_images-item:nth-child(2) { 
+      grid-area: 2 / 1 / 3 / 3; 
+    }
+    .g_images-item:nth-child(3) { 
+      grid-area: 2 / 3 / 3 / 5; 
+    }
+}
+
+
 }
 
 @media (min-width: 767px) {
@@ -1308,7 +1357,22 @@ body._touch .menu__list > li._active .menu__arrow {
       gap: 40px;
     }
   }
-
+  .g_images__body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      .g_images-item {
+        height: 300px;
+        .g_images__body .g_images-item .g_images-content {
+          transform: translateY(-18em);
+        }
+      }
+      .g_images-item:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+      .g_images-item:nth-child(2) { grid-area: 2 / 1 / 3 / 2; }
+      .g_images-item:nth-child(3) { grid-area: 3 / 1 / 4 / 2; }
+  }
 
 }
 
