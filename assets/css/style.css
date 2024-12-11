@@ -758,6 +758,7 @@ body._touch .menu__list > li._active .menu__arrow {
   font-weight: 400;
   line-height: 1.2;
 }
+
 /*---------------- Section vacations ---------------------------------*/
 .vacations {
   padding: 50px 0;
@@ -777,6 +778,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .vacations__body {
   margin-top: 44px;
 }
+
 .slide__item3 {
   height: 100%;
   display: flex;
@@ -994,7 +996,47 @@ body._touch .menu__list > li._active .menu__arrow {
   color: var(--white-color);
 }
 
-/*---------------- Section   ---------------------------------*/
+/*---------------- Section join ---------------------------------*/
+.join {
+  padding: 50px 0;
+}
+
+.join__title {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.join__text {
+  font-family: var(--inter-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 121%; /* 21.78px/18px */
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.join__icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.join__icons a {
+  margin: 0 10px;
+}
+
+.join__body {
+  margin-top: 44px;
+}
+.join__body .join__gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.join__body .join__gallery a img {
+  border-radius: 16px;
+}
+
 /*----------------------------------------------------------------------------------------------*/
 /*---------------- FOOTER ----------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------*/
@@ -1350,6 +1392,10 @@ body._touch .menu__list > li._active .menu__arrow {
     display: grid;
     grid-template-columns: 1fr;
   }
+  .join__body .join__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   .footer {
     margin: 30px 18px 30px;
   }
@@ -1514,6 +1560,10 @@ body._touch .menu__list > li._active .menu__arrow {
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+  .join__body .join__gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
   .footer-widget .footer-widget-title:first-child .footer-logo {
     text-align: center;

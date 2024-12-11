@@ -13,9 +13,11 @@
 
 
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
 	<link rel="stylesheet" href="assets/css/modal-style.css">
-	<link rel="stylesheet" href="assets/css/style.css">	
 	<link rel="stylesheet" href="assets/css/font.css">	
+	<link rel="stylesheet" href="assets/css/style.css">	
+	<link rel="stylesheet" href="assets/css/about-style.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -491,12 +493,27 @@
 				</div>
 			</section>
 
-			<section class="">
-				<div class="__container _container">
-					<h2 class="__title h2__title"></h2>
-					<div class="__text"></div>
-					<div class="__body">
-
+			<section class="join">
+				<div class="join__container _container">
+					<h2 class="join__title h2__title">Join to our community</h2>
+					<div class="join__text">We value a great working relationship with our clients. It’s why many of them have worked with 
+						us for years as their trusted partner
+					</div>
+					<div class="join__icons">
+						<a href=""><img src="assets/img/in.svg" alt=""></a>
+						<a href=""><img src="assets/img/instagram.svg" alt=""></a>
+					</div>
+					<div class="join__body">
+						<div class="join__gallery">
+							<a href="assets/img/main-page/galery1.png"><img src="assets/img/main-page/galery1.png" alt=""></a>
+							<a href="assets/img/main-page/galery2.png"><img src="assets/img/main-page/galery2.png" alt=""></a>
+							<a href="assets/img/main-page/galery1.png"><img src="assets/img/main-page/galery1.png" alt=""></a>
+							<a href="assets/img/main-page/galery2.png"><img src="assets/img/main-page/galery2.png" alt=""></a>
+							<a href="assets/img/main-page/galery1.png"><img src="assets/img/main-page/galery1.png" alt=""></a>
+							<a href="assets/img/main-page/galery2.png"><img src="assets/img/main-page/galery2.png" alt=""></a>
+							<a href="assets/img/main-page/galery1.png"><img src="assets/img/main-page/galery1.png" alt=""></a>
+							<a href="assets/img/main-page/galery2.png"><img src="assets/img/main-page/galery2.png" alt=""></a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -614,7 +631,7 @@
 			AOS.init();
 		</script>
 		<script>
-			$(".item").magnificPopup({
+			$(".join__gallery a").magnificPopup({
 			type : 'image',
 			gallery : {
 				enabled : true
