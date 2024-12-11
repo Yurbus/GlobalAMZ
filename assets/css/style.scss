@@ -101,11 +101,11 @@ body._lock {
 @media (max-width: 479.98px) { 
   .primary__btn { 
     font-size: 12px;
-    padding: 19px 45px;
+    padding: 21px 45px;
   }
   .second__btn {
     font-size: 12px;
-    padding: 19px 45px; 
+    padding: 21px 45px; 
   }
 }
 
@@ -346,6 +346,13 @@ body._touch .menu__list > li._active .menu__arrow {
 .h2__title {
   font-weight: 800;
   font-size: clamp(24px, 3vw, 44px);
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+.h3__title {
+  font-weight: 800;
+  font-size: clamp(24px, 3vw, 32px);
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--black-color);
@@ -684,7 +691,7 @@ body._touch .menu__list > li._active .menu__arrow {
   margin: 0 auto;
 }
 .whatCan__body {
-  margin-top: 20px;
+  margin-top: 44px;
 }
 .swiper2 {
   width: 100%;
@@ -692,6 +699,12 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .swiper-slide {
   .slide__item2 {
+    height: 440px;
+    img {
+      height: 440px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
     .item__title {
       margin: -90px 18px 18px;
       font-size: 24px;
@@ -1376,7 +1389,7 @@ body._touch .menu__list > li._active .menu__arrow {
     a {
       display: flex;
       justify-content: center;
-      padding: 19px;
+      padding: 21px;
     }
   }
   .swiper-button-next {
