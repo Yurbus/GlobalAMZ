@@ -345,8 +345,100 @@
 	}
 }
 
-/*---------------- Section  ---------------------------------*/
+/*---------------- Section touch ---------------------------------*/
+.touch {
+	padding: 75px 0;
+}
+.touch__body {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 44px;
+	justify-content: space-between;
+	align-items: center;
+	background: url('../img/touch__bg.svg') no-repeat;
+	padding: 44px;
+	border-radius: 32px;
+}
+.touch__content {
+	max-width: 480px;
+	.touch__title {
+		color: var(--white-color);
+		margin-bottom: 10px;
+	}
+	.touch__text {
+		color: var(--white-color);
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 120%;		
+	}
+}
 
+.touch__form {
+
+}
+.wpcf7-form {
+	text-align: center;
+}
+.input__feedback {
+	.input__group {
+		p {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 10px;
+			.wpcf7-form-control-wrap {
+				margin: 5px 0;
+				.wpcf7-form-control {
+					font-size: 14px;
+					font-weight: 500;
+					color: var(--white-color);
+					line-height: 120%;
+					padding: 22px 18px;
+					background: #FFFFFF40;
+					border-radius: 8px;
+					border: none;
+					width: 100%;
+					&::placeholder {
+						color: var(--white-color);
+					}
+				}
+			}
+		}
+	}
+}
+.input__group-textarea {
+	margin: 5px 0;
+	.wpcf7-textarea {
+		font-family: var(--red-hat-font);
+		color: var(--white-color);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 120%;
+		padding: 22px 18px;
+		background: #FFFFFF40;
+		border-radius: 8px;
+		border: none;
+		width: 100%;
+		&::placeholder {
+					color: var(--white-color);
+				}
+	}
+}
+
+.contact__btn {
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 21.17px;
+	text-align: center;
+	padding: 16px 70px;
+	border-radius: 16px;
+	background: var(--black-color);
+	color: var(--white-color);
+	border: none;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background: var(--pr-hover-color);
+	}
+}
 
 
 
@@ -408,6 +500,11 @@
 			max-width: 100%;
 		}
 	}
+	.touch__body {
+		display: grid;
+		grid-template-columns: 1fr;
+		background: url('../img/touch__bg-mob.svg') no-repeat;
+  }
 }
 
 
@@ -429,6 +526,20 @@
 		}
 		.swiper-button-prev  {
 			left: 15%;
+		}
+	}
+}
+@media (max-width: 559.98px) {
+	.touch__body {
+		padding: 44px 24px;
+  }
+	.input__feedback {
+		.input__group {
+			p {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 0;
+		  }
 		}
 	}
 }
