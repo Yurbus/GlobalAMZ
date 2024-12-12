@@ -78,6 +78,7 @@ var swiper = new Swiper(".mySwiper3", {
 });
 var swiper = new Swiper(".mySwiper4", {
     slidesPerView: 1,
+    slidesPerGroup: 3,
     grid: {
         rows: 2,
     },
