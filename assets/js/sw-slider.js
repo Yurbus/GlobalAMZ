@@ -78,10 +78,10 @@ var swiper = new Swiper(".mySwiper3", {
 });
 var swiper = new Swiper(".mySwiper4", {
     slidesPerView: 1,
-    slidesPerGroup: 3,
-    grid: {
-        rows: 2,
-    },
+    slidesPerGroup: 1,
+    // grid: {
+    //     rows: 2,
+    // },
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -95,13 +95,16 @@ var swiper = new Swiper(".mySwiper4", {
     breakpoints: {
         580: {
             slidesPerView: 2,
+            slidesPerGroup: 1,
         },
-        890: {
+        960: {
             slidesPerView: 3,
+            slidesPerGroup: 2,
             
         },
         1024: {
             slidesPerView: 4,
+            slidesPerGroup: 4,
         
         },
     },
