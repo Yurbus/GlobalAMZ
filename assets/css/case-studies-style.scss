@@ -66,7 +66,7 @@
 /*---------------- Section success ---------------------------------*/
 
 .success {
-	padding: 75px 0;
+	padding: 60px 0;
 }
 .success__body {
 	display: grid;
@@ -75,7 +75,7 @@
 }
 .success__title {
 	h3 {
-
+		line-height: 132.3125%; /* 42.34px/32 */
 	}
 }
 .success__content {
@@ -86,6 +86,61 @@
 		font-weight: 400;
 		line-height: 121%; /* 21.78px/18px */
 		
+	}
+}
+
+/*---------------- Section cases__items ---------------------------------*/
+
+.cases__items {
+}
+.cases__items__body {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+.cases__item {
+	img {
+		border-radius: 24px;
+	}
+	.item__title {
+		margin-top: 12px;
+	}
+	.category {
+		span {
+			padding: 6px 10px;
+			border-radius: 8px;
+			color: var(--white-color);
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 132.285714%; /* 18.52px/14px */
+			margin: 12px 0;
+			display: inline-block;
+		}
+		.cat-1 {
+			background: var(--primary-color);
+		}
+		.cat-2 {
+			background: var(--dark-blue-color);
+		}
+	}
+	.item__text {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 121%; /* 21.78px/18 */
+		margin-bottom: 12px;
+	}
+	.cases__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--dark-blue-color);
+		color: var(--white-color);
+		padding: 21px;
+		transition: all 0.3s ease 0s;
+		&:hover {
+		background: var(--pr-hover-color);
+		}
 	}
 }
 
@@ -111,9 +166,17 @@
 	.case-hero__bg img {
 		height: 500px;
 	}
+	.cases__items__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
 }
 
 @media (max-width: 767.98px) {
+	.case-hero {
+		height: 600px;
+	}
 	.case-hero__bg {
 		img {
 			height: 600px;
@@ -125,9 +188,17 @@
 			padding-left: 32px;
 		}
 	}
+	.success__body {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
 }
 @media (max-width: 559.98px) {
-
+	.cases__items__body {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+	}
 }
 @media (max-width: 479.98px) {
 	.case-hero__bg {
@@ -139,5 +210,8 @@
 		.case-hero__content {
 			padding: 10rem 16px 0;
 		}
+	}
+	.success {
+		padding: 25px 0;
 	}
 }
