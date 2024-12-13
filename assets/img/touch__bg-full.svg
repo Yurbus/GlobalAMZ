@@ -1,0 +1,19 @@
+<svg width="1660" height="460" viewBox="0 0 1660 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1494_1088)">
+<rect width="1660" height="460" rx="32" fill="url(#paint0_diamond_1494_1088)"/>
+<rect x="1600.03" y="-175.599" width="294.538" height="294.538" rx="24" transform="rotate(38.4198 1600.03 -175.599)" fill="#D9D9D9" fill-opacity="0.15"/>
+<rect x="1600.84" y="-125.949" width="226.711" height="226.711" rx="24" transform="rotate(38.4198 1600.84 -125.949)" fill="#D9D9D9" fill-opacity="0.1"/>
+<rect x="-155" y="360.987" width="294.538" height="294.538" rx="24" transform="rotate(-28.1564 -155 360.987)" fill="#D9D9D9" fill-opacity="0.2"/>
+<rect x="-109.12" y="379.98" width="226.711" height="226.711" rx="24" transform="rotate(-28.1564 -109.12 379.98)" fill="#D9D9D9" fill-opacity="0.15"/>
+</g>
+<defs>
+<radialGradient id="paint0_diamond_1494_1088" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420.03 230) rotate(10.5083) scale(1261.12 2933.31)">
+<stop stop-color="#DF9226"/>
+<stop offset="0.645" stop-color="#794F15"/>
+<stop offset="0.99" stop-color="#502F00"/>
+</radialGradient>
+<clipPath id="clip0_1494_1088">
+<rect width="1660" height="460" rx="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>

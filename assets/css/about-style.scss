@@ -434,9 +434,11 @@
 	background: var(--black-color);
 	color: var(--white-color);
 	border: none;
+	cursor: pointer;
 	transition: all 0.3s ease 0s;
 	&:hover {
-		background: var(--pr-hover-color);
+		// background: var(--pr-hover-color);
+		background: lighten( #000000,  15%);
 	}
 }
 
@@ -462,6 +464,9 @@
 	}
 	.ab-hero__content {
 		padding-top: 14%;
+	}
+	.touch__body {
+		background: url('../img/touch__bg-full.svg') no-repeat;
 	}
 }
 
@@ -504,7 +509,8 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		background: url('../img/touch__bg-mob.svg') no-repeat;
-  }
+		background-size: cover;
+	}
 }
 
 

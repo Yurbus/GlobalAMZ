@@ -427,10 +427,11 @@
   background: var(--black-color);
   color: var(--white-color);
   border: none;
+  cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 .contact__btn:hover {
-  background: var(--pr-hover-color);
+  background: #262626;
 }
 
 /*----------------------------------------------------------------------------------------------*/
@@ -445,6 +446,9 @@
   }
   .ab-hero__content {
     padding-top: 14%;
+  }
+  .touch__body {
+    background: url("../img/touch__bg-full.svg") no-repeat;
   }
 }
 @media (max-width: 960px) {
@@ -482,6 +486,7 @@
     display: grid;
     grid-template-columns: 1fr;
     background: url("../img/touch__bg-mob.svg") no-repeat;
+    background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
