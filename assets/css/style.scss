@@ -717,7 +717,15 @@ body._touch .menu__list > li._active .menu__arrow {
       color: var(--white-color);
     }
   }
-  
+}
+.swiper2 {
+  .swiper-button-next, 
+  .swiper-button-prev {
+    top: 84% !important;
+  }
+  .swiper-pagination {
+    bottom: 96px !important;
+  }
 }
 
 /*---------------- Section partnership ---------------------------------*/
@@ -1213,6 +1221,17 @@ body._touch .menu__list > li._active .menu__arrow {
     max-width: 1660px;
     margin: 0 auto;
     padding: 0 18px;
+  }
+  .swiper-css-mode.swiper-horizontal > .swiper-wrapper {
+    height: 600px !important;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    top: 96% !important;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets, 
+  .swiper-pagination-bullets.swiper-pagination-horizontal, 
+  .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 15px;
   }
 }
 @media (max-width: 1180px) {
