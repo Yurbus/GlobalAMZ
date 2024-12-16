@@ -182,7 +182,7 @@ body._lock {
 }
 .menu__list {
   .menu-item:hover::after {
-    width: 100%;
+    width: 90%;
     transition: 0.3s ease all;
   }
 }
@@ -1431,7 +1431,11 @@ body._touch .menu__list > li._active .menu__arrow {
   }
   .menu-item-has-children::before {
     display: block;
+    margin-top: 8px;
   }
+  .menu-item-has-children._active .sub-menu {
+    display: block; /* Показываем подменю, если у родительского элемента есть класс '_active' */
+}
   .sub-menu {
     position: relative;
     flex: 1 1 100%;

@@ -26,19 +26,48 @@ const isMobile = {
     }
 };
 
+// if (isMobile.any()) {
+//     document.body.classList.add('_touch');
+	
+// 			let menuArrows = document.querySelectorAll('.menu-item-has-children');
+// 			if (menuArrows.length > 0) {
+// 				for (let index = 0; index < menuArrows.length; index++) {
+// 					const menuArrow = menuArrows[index];
+// 					menuArrow.addEventListener("click", function (e) {
+// 						menuArrow.parentElement.classList.toggle('_active');
+// 					});
+// 				}
+// 			}
+
+// } else {
+//     document.body.classList.add('_pc');
+// }
+
 if (isMobile.any()) {
     document.body.classList.add('_touch');
-	
-			let menuArrows = document.querySelectorAll('.menu-item-has-children');
-			if (menuArrows.length > 0) {
-				for (let index = 0; index < menuArrows.length; index++) {
-					const menuArrow = menuArrows[index];
-					menuArrow.addEventListener("click", function (e) {
-						menuArrow.parentElement.classList.toggle('_active');
-					});
-				}
-			}
+    
+    // Находим все элементы с классом 'menu-item-has-children'
+    let menuItems = document.querySelectorAll('.menu-item-has-children');
+    if (menuItems.length > 0) {
+        for (let index = 0; index < menuItems.length; index++) {
+            const menuItem = menuItems[index];
+            
+            // Добавляем обработчик клика для каждого элемента
+            menuItem.addEventListener("click", function (e) {
+                e.stopPropagation(); // Останавливаем всплытие события
+                
+                // Убираем класс '_active' у всех других элементов
+                menuItems.forEach((item) => {
+                    if (item !== this) {
+                        item.classList.remove('_active');
+                    }
+                });
 
+                // Переключаем класс '_active' только у текущего элемента
+                this.classList.toggle('_active');
+            });
+        }
+    }
 } else {
     document.body.classList.add('_pc');
 }
