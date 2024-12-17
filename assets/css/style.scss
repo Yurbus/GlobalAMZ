@@ -182,7 +182,7 @@ body._lock {
 }
 .menu__list {
   .menu-item:hover::after {
-    width: 90%;
+    width: 100%;
     transition: 0.3s ease all;
   }
 }
@@ -193,11 +193,12 @@ body._lock {
   position: absolute;
   top: 100%;
   padding: 15px;
-  min-width: 290px;
+  // min-width: 290px;
   background: var(--white-color);
   .menu-item {
-    display: block;
+    display: inline-block;
     padding: 10px;
+    white-space: nowrap;
   }
 }
 .menu-item-has-children {
@@ -1434,8 +1435,10 @@ body._touch .menu__list > li._active .menu__arrow {
     margin-top: 8px;
   }
   .menu-item-has-children._active .sub-menu {
-    display: block; /* Показываем подменю, если у родительского элемента есть класс '_active' */
-}
+     /* Показываем подменю, если у родительского элемента есть класс '_active' */
+    display: flex;
+    flex-direction: column;
+  }
   .sub-menu {
     position: relative;
     flex: 1 1 100%;
@@ -1443,10 +1446,16 @@ body._touch .menu__list > li._active .menu__arrow {
     padding: 15px 0;
     color: var(--white-color);
     background: var(--dark-blue-color);
+    .menu-item {
+      a {
+        font-size: 15px;
+        color: #c5c5c5;
+      }
+    }
   }
-  .menu__list._active .sub-menu {
-    display: block;
-  }
+  // .menu__list._active .sub-menu {
+  //   display: block;
+  // }
   /*-------- end menu ---------------*/
 
   .header__lang {
