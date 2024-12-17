@@ -109,3 +109,22 @@ var swiper = new Swiper(".mySwiper4", {
         },
     },
 });
+
+var swiper = new Swiper(".mySwiper5", {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    autoHeight: true,
+    // grid: {
+    //     rows: 2,
+    // },
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    mousewheel: false,
+    keyboard: true,
+});
