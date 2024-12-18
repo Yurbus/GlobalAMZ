@@ -293,6 +293,43 @@
   margin: 0 auto;
   max-width: 570px;
 }
+/*---------------- Section career-benef ---------------------------------*/
+.career-benef {
+  padding: 50px 0 25px;
+}
+
+.career-benef__title {
+  margin-bottom: 24px;
+}
+
+.career-benef__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.career-benef__body .benef__item {
+  border-bottom: 1px solid var(--primary-color);
+}
+.career-benef__body .benef__item .benef__num {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 132%; /* 58.21px/44px */
+  margin-bottom: 12px;
+}
+.career-benef__body .benef__item .benef__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 132%; /* 31.75px/24 */
+  margin-bottom: 12px;
+}
+.career-benef__body .benef__item .benef__red-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 132%; /* 31.75px/24 */
+  color: rgb(255, 0, 0);
+  margin-bottom: 24px;
+}
+
 /*---------------- Section touch ---------------------------------*/
 .touch {
   padding: 75px 0;
@@ -463,6 +500,11 @@
     font-size: 14px;
     font-weight: 500;
   }
+  .career-benef__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
 }
 @media (max-width: 559.98px) {
   .touch__body {
@@ -483,6 +525,11 @@
   }
   .mySwiper5 .swiper-wrapper .swiper-slide .review__item .item__review-img {
     margin-bottom: 20px;
+  }
+  .career-benef__body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
   }
 }
 @media (max-width: 479.98px) {
