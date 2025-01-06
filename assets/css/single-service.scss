@@ -64,53 +64,146 @@
 
 /*---------------- Section flobal_ex ---------------------------------*/
 
+// .flobal_ex {
+// 	padding: 50px 0;
+// 	.flobal_ex__title {
+// 		text-align: center;
+// 		margin-bottom: 6px;
+// 	}
+// 	.flobal_ex__body {
+// 	display: grid;
+// 	grid-template-columns:repeat(4, 1fr);
+// 	gap: 10px;
+// 	align-items: center;
+// 	margin-top: 44px;
+// 	.flobal_ex__item {
+// 		position: relative;
+// 		height: 433px;
+// 		.flobal_ex__bg {
+// 			img {
+// 			object-fit: cover;
+// 			border-radius: 24px;
+// 			height: 433px;
+// 			}
+// 		}
+// 		.item__flobal_ex-text {
+// 			position: relative;
+// 			z-index: 3;
+// 			display: flex;
+// 			flex-direction: column;
+// 			justify-content: flex-end;
+// 			min-height: 100%;
+// 			padding: 24px 18px;
+// 			.item__flobal_ex-title {
+// 				font-size: 24px;
+// 				font-weight: 800;
+// 				line-height: 100%; /* 24px/24 */
+// 				margin-bottom: 24px;
+// 				color: var(--white-color);
+// 			}
+// 			.item__flobal_ex-descr {
+// 				font-size: 16px;
+// 			    line-height: 100%; /* 16px/16 */
+// 				color: var(--white-color);
+//              font-weight: 400;
+// 			}
+// 		}				
+// 		}
+// 	}
+// }
 .flobal_ex {
 	padding: 50px 0;
 	.flobal_ex__title {
 		text-align: center;
 		margin-bottom: 6px;
 	}
-	.flobal_ex__body {
-	display: grid;
-	grid-template-columns:repeat(4, 1fr);
-	gap: 10px;
-	align-items: center;
-	margin-top: 44px;
-	.flobal_ex__item {
-		position: relative;
-		height: 433px;
-		.flobal_ex__bg {
-			img {
-			object-fit: cover;
-			border-radius: 24px;
-			height: 433px;
-			}
-		}
-		.item__flobal_ex-text {
-			position: relative;
-			z-index: 3;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			min-height: 100%;
-			padding: 24px 18px;
-			.item__flobal_ex-title {
-				font-size: 24px;
-				font-weight: 800;
-				line-height: 100%; /* 24px/24 */
-				margin-bottom: 24px;
-				color: var(--white-color);
-			}
-			.item__flobal_ex-descr {
-				font-size: 16px;
-				font-weight: 400;
-				line-height: 100%; /* 16px/16 */
-				color: var(--white-color);
-			}
-		}
-		}
-	}
 }
+.flobal_ex__body {
+	overflow-x: auto; /* Включаем горизонтальный скролл */
+	scrollbar-width: none; /* Скрыть скроллбар в Firefox */
+	position: relative;
+	margin-top: 44px;
+  }
+  
+  .flobal_ex__body::-webkit-scrollbar {
+	display: none; /* Скрыть скроллбар в WebKit */
+  }
+  
+  .flobal_ex__wrapper {
+	display: flex; /* Горизонтальное расположение карточек */
+	gap: 16px; /* Расстояние между карточками */
+	width: calc(100% + 16px); /* Увеличиваем ширину, чтобы обрезать 5-ю карточку */
+  }
+  
+  .flobal_ex__item {
+	flex: 0 0 calc(24% - 12px); /* Задаем ширину каждой карточки так, чтобы вместилось ровно 4 и кусочек 5-й */
+	min-width: 240px; /* Минимальная ширина для адаптивности */
+	height: 440px;
+	box-sizing: border-box;
+	position: relative;
+  }
+  .flobal_ex__bg {
+	img {
+	object-fit: cover;
+	border-radius: 24px;
+	height: 433px;
+	}
+	}
+	.item__flobal_ex-text {
+		position: relative;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: 100%;
+		padding: 24px 18px;
+		.item__flobal_ex-title {
+			font-size: 24px;
+			font-weight: 800;
+			line-height: 100%; /* 24px/24 */
+			margin-bottom: 24px;
+			color: var(--white-color);
+		}
+		.item__flobal_ex-descr {
+			font-size: 16px;
+			line-height: 100%; /* 16px/16 */
+			color: var(--white-color);
+			font-weight: 400;
+		}
+	}		
+  
+  .flobal_ex__body:after {
+	content: ''; /* Добавляем дополнительный отступ справа для красоты */
+	flex: 0 0 16px;
+  }
+  
+  
+  @media (max-width: 1100px) {
+	.flobal_ex__item {
+	  flex: 0 0 calc(32% - 12px); /* Изменяем ширину карточек для планшетов */
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.flobal_ex__item {
+	  flex: 0 0 calc(45% - 12px); /* Для маленьких экранов отображается 2 карточки и кусочек 3-й */
+	}
+  }
+  
+  @media (max-width: 640px) {
+	.flobal_ex__item {
+	  flex: 0 0 calc(40% - 12px); /* На мобильных показывается 1 карточка и кусочек 2-й */
+	}
+  }
+  @media (max-width: 480px) {
+	.flobal_ex__item {
+	  flex: 0 0 calc(25% - 12px); /* На мобильных показывается 1 карточка и кусочек 2-й */
+	}
+  }
+  
+  
+
+
 
 /*---------------- Section stories ---------------------------------*/
 .stories {

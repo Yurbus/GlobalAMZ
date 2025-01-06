@@ -108,6 +108,47 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+// -------- Scroll мышкой -----------------------------------------
+
+let isMouseDown = false;
+let startX, scrollLeft;
+
+const container = document.querySelector('.flobal_ex__body');
+
+// Функция для проверки, используется ли ПК
+function isDesktop() {
+    return window.innerWidth >= 1024; // Например, только для экранов шире 1024px
+}
+
+// Добавляем обработчики событий только на ПК
+if (isDesktop()) {
+    container.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+        container.style.cursor = 'grabbing';  // Изменяем курсор при захвате
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        isMouseDown = false;
+        container.style.cursor = 'grab';  // Восстанавливаем курсор, когда мышь покидает контейнер
+    });
+
+    container.addEventListener('mouseup', () => {
+        isMouseDown = false;
+        container.style.cursor = 'grab';  // Восстанавливаем курсор, когда отпускаем кнопку мыши
+    });
+
+    container.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return; // Прокручиваем только, когда мышь нажата
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2;  // Увеличиваем скорость прокрутки
+        container.scrollLeft = scrollLeft - walk;
+    });
+}
+
+
 // -------- Прокрутка при клике -----------------------------------------
 
 // const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
