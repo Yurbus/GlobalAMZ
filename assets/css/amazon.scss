@@ -90,7 +90,33 @@
 .commerce__img {
 }
 
+.amz-section__title {
+	text-align: left;
+}
 
+.flobal_ex__body-amz {
+	overflow-y: hidden;
+}
+.flobal_ex__wrapper-amz {
+	display: flex; /* Горизонтальное расположение карточек */
+	gap: 10px; /* Расстояние между карточками */
+	width: calc(100% + 10px); /* Увеличиваем ширину, чтобы обрезать 5-ю карточку */
+	.flobal_ex__item {
+		flex: 0 0 calc(25% - 10px); /* Задаем ширину каждой карточки так, чтобы вместилось ровно 4 и кусочек 5-й */
+		min-width: 290px; /* Минимальная ширина для адаптивности */
+		height: 440px;
+		box-sizing: border-box;
+		position: relative;
+	  }
+}
+@media (min-width: 1300px) {
+	.flobal_ex__body-amz {
+		overflow-y: hidden;
+	}
+	.flobal_ex__wrapper-amz {
+		width: 100%;
+	}
+}
 
 
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
