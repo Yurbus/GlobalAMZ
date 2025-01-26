@@ -266,7 +266,8 @@
 		padding-bottom: 30px;
 		overflow: hidden;
 		img {
-
+			height: 200px;
+			object-fit: cover;
 		}
 		h3 {
 			font-size: 24px;
@@ -296,7 +297,6 @@
 .story__left {
 	.story__title {
 		margin-bottom: 12px;
-		max-width: 350px;
 	}
 	.story__text {
 		p {

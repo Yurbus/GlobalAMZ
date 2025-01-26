@@ -526,11 +526,19 @@ body._touch .menu__list > li._active .menu__arrow {
      object-fit: cover;
 }
 .about__images .images__big {
+  max-height: 427px;
   max-width: 412px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
 }
 .about__images .images__litle {
   max-width: 325px;
+  max-height: 335px;
   margin-left: -132px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
 }
 
 /*---------------- Section know ---------------------------------*/
@@ -540,11 +548,23 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .know__body .know__title {
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: 15px;
+}
+.know__body .know__text {
+  text-align: center;
+  font-family: var(--inter-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
 }
 .know__body .know__content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  margin-top: 44px;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
   gap: 40px;
 }
 
@@ -701,14 +721,15 @@ body._touch .menu__list > li._active .menu__arrow {
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
-  max-width: 650px;
+  max-width: 850px;
   margin: 0 auto;
 }
 .clients__body .clients__content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
   gap: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 /*---------------- Section whatCan ---------------------------------*/

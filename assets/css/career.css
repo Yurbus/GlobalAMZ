@@ -190,6 +190,10 @@
 }
 
 .application__title {
+  margin-bottom: 15px;
+}
+
+.application__text {
   margin-bottom: 24px;
 }
 
