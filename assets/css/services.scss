@@ -171,30 +171,35 @@
 	  }
 	}
   }
-  
-  .our_serv__item {
-	position: relative;
-	width: 100%; /* Выставьте подходящую ширину */
-	height: 400px; /* Выставьте подходящую высоту */
-	overflow: hidden; /* Скрывает элементы, которые выходят за пределы контейнера */
-  }
-  
-  .our_serv__bg {
+
+.swiper-wrapper {
+	.swiper-slide {
+		.our_serv__item {
+			position: relative;
+			width: 100%; /* Выставьте подходящую ширину */
+			height: 460px; /* Выставьте подходящую высоту */
+			overflow: hidden; /* Скрывает элементы, которые выходят за пределы контейнера */
+		}
+	}
+}
+.item__our_serv-wrapp {
+	margin-bottom: 30px;
+}
+.our_serv__bg {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 0; /* Ставим картинку ниже текста */
-  }
-  
-  .our_serv__bg img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-  }
-  
-  .item__our_serv-text {
+	img {
+		width: 100%;
+		height: 460px;
+		object-fit: cover;
+		border-radius: 24px;
+	}
+}
+.item__our_serv-text {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -204,29 +209,28 @@
 	z-index: 1; /* Текст будет сверху */
 	transform: translateY(78%); /* Начальная позиция текста — спрятан */
 	transition: transform 0.3s ease, padding-bottom 0.3s ease; /* Анимация для выезда текста */
-  }
-  .item__our_serv-descr {
+}
+.item__our_serv-descr {
 	opacity: 0;
-  }
-  .our_serv__item:hover .item__our_serv-text {
+}
+.our_serv__item:hover .item__our_serv-text {
 	transform: translateY(0); /* При наведении текст выезжает */
 	padding-bottom: 40px; /* Увеличиваем паддинг снизу для анимации */
-  }
-  
-  .item__our_serv-title {
+}
+
+.item__our_serv-title {
 	margin: 0;
 	font-size: 18px;
 	font-weight: bold;
 	z-index: 2; /* Заголовок всегда будет сверху */
-  }
-  
-  .our_serv__item:hover .item__our_serv-title {
+}
+.our_serv__item:hover .item__our_serv-title {
 	/* Убираем подъем заголовка */
-  }
-  
-  .our_serv__item:hover .item__our_serv-text .item__our_serv-descr {
+}
+
+.our_serv__item:hover .item__our_serv-text .item__our_serv-descr {
 	opacity: 1; /* Текст станет видимым при наведении */
-  }
+}
 
 
 /*---------------- Section touch ---------------------------------*/

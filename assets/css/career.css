@@ -195,6 +195,7 @@
 
 .application__text {
   margin-bottom: 24px;
+  max-width: 850px;
 }
 
 .application__body {

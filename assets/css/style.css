@@ -582,8 +582,9 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .case__text {
   text-align: center;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
   color: var(--white-color);
+  max-width: 850px;
 }
 
 .swiper {
@@ -746,7 +747,7 @@ body._touch .menu__list > li._active .menu__arrow {
   text-align: center;
   font-size: 18px;
   font-weight: 400;
-  max-width: 650px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
