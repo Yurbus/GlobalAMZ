@@ -343,6 +343,9 @@
   .service-hero {
     height: 600px;
   }
+  .service-hero img {
+    height: 600px;
+  }
   .service-hero__content {
     padding-top: 14%;
   }
