@@ -445,7 +445,6 @@ body._touch .menu__list > li._active .menu__arrow {
   color: var(--white-color);
 }
 .hero__content .hero__btns-list li .primary__btn:hover {
-  color: var(--black-color);
   background: var(--pr-hover-color);
 }
 
