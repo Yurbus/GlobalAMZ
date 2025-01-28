@@ -90,6 +90,7 @@
 
 .amz-section__title {
   text-align: left;
+  margin-bottom: 30px;
 }
 
 .flobal_ex__body-amz {
@@ -116,6 +117,26 @@
   .flobal_ex__wrapper-amz {
     width: 100%;
   }
+}
+/* -------------- section whyAmz --------------------- */
+.whyAmz {
+  padding: 100px 0 50px;
+}
+
+.whyAmz__title {
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+
+.swiper7 {
+  height: 570px;
+}
+
+.sl-flobal_ex__item .item__flobal_ex-text {
+  margin-top: 100px;
+}
+.sl-flobal_ex__item .item__flobal_ex-title {
+  margin-bottom: 12px;
 }
 /*=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/==/=*/
 /*================= АДАПТАЦІЯ СТИЛІВ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ ===================================*/
@@ -144,12 +165,21 @@
     padding-top: 10rem;
     padding-left: 32px;
   }
+  .commerce__body {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 479.98px) {
+  .commerce {
+    padding: 50px 0 50px;
+  }
   .amz-hero__bg img {
     height: 530px;
   }
   .amz-hero__body .amz-hero__content {
     padding: 6rem 16px 0;
+  }
+  .amz-section__title {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=amazon.css.map */
